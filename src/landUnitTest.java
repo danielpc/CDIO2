@@ -48,12 +48,20 @@ public class landUnitTest {
 	}
 	
 	@Test
-	public void testValidScoreAndExtraTurn(){
+	public void testValidTurn(){
 		Player p1 = new Player("player");
-		field = new Field[2];
-		field[0] = new Field("Not extra turn field","", -1001, true); 
+		field = new Field[1];
+		field[0] = new Field("Not extra turn field","", -1001, false); 
 		boolean validTurn = field[0].land(p1);
 		assertEquals(false, validTurn);		
+	}
+	
+	@Test
+	public void testBalanceNotUnderZero(){
+		Player p1 = new Player("player");
+		field = new Field[1];
+		field[0] = new Field("Not extra turn field","", -1001, false); 
+		assertEquals(1000, p1.getBalance());
 	}
 	
 	
