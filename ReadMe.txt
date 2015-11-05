@@ -1,0 +1,7 @@
+Authors
+Daniel Plaetner-Cancela
+Oliver Skov Celest
+Valdemar Carøe
+Rune Hou Thode
+Rikke Karlsmark
+Andreas Fyhn Andersen
