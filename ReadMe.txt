@@ -5,3 +5,4 @@ Valdemar Carøe
 Rune Hou Thode
 Rikke Karlsmark
 Andreas Fyhn Andersen
+Giuseppe Abbate
