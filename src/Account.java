@@ -33,6 +33,7 @@ public class Account {
 			return true;
 		}
 		else
+			balance = 0;
 			return false;
 	}
 
