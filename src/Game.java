@@ -12,6 +12,9 @@ public class Game {
 	private  Field[] field;
 	private final static Map<String, String> LANGUAGE = new HashMap<String, String>(); 
 	
+	/**
+	 * Sets up the text for each text field. Makes it easier to change the text. 
+	 */
 	private static void setUpStrings()
 	{
 		LANGUAGE.put("Tower", "Tower and got 250 points");
@@ -34,7 +37,9 @@ public class Game {
 		LANGUAGE.put("Wins", "%s wins");	
 	}
 	
-	// Constructor
+	/**
+	 * Creates the Game, with the corresponding fields and sets up 2 players. 
+	 */
 	public Game()
 	{
 		field = new Field[11];
@@ -63,6 +68,10 @@ public class Game {
 		}
 	}
 	
+	/**
+	 * Handles the game logic (switching turns, checking for a winner, etc.).
+     * Keeps running until a winner of the game has been found.
+	 */
 	private void run()
 	{
 		// Game logic
@@ -115,7 +124,10 @@ public class Game {
 	}
 	
 
-	
+	/**
+	 * Runs the game. 
+	 * @param args
+	 */
 	public static void main(String[] args) 
 	{
 		setUpStrings();

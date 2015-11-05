@@ -5,17 +5,25 @@ public class Dice {
 	private int value;
 	private int sides;
 	
-	// Constructor
+	/**
+	 * Creates a x-sided dice
+	 * @param sides how many sides the dice should have
+	 */
 	public Dice(int sides)
 	{
 		this.sides = sides;
 		roll();
 	}
 
-	// Getters
+	/**
+	 * Returns the current value of the dice
+	 * @return the value of the dice
+	 */
 	public int getValue() { return value; }
 
-	// Methods
+	/**
+	 * Assigns a random value to the dice variable - value
+	 */
 	public void roll()
 	{
 		value = (int)(sides * Math.random()) + 1;

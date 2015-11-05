@@ -5,13 +5,19 @@ public class DiceCup {
 	// Variable fields
 	private Dice[] dices;
 	
-	// Constructor
+
+	/**
+	 * Creates a dicecup containing 2 dices, which are 6-sided
+	 */
 	public DiceCup()
 	{
 		dices = new Dice[]{new Dice(6), new Dice(6)};
 	}
 	
-	// Getters
+	/**
+	 * Foreach dice it will add the value together and return the sum
+	 * @return the sum of all the dices in the dicecup
+	 */
 	public int getDiceSum()
 	{
 		int result = 0;
@@ -22,7 +28,11 @@ public class DiceCup {
 		
 		return result;
 	}
-
+	
+	/**
+	 * Foreach dice, it will add the dice value to an array
+	 * @return an array with each dice value 
+	 */
 	public int[] getDiceValues()
 	{
 		int[] result = new int[dices.length];
@@ -33,7 +43,9 @@ public class DiceCup {
 		return result;
 	}
 	
-	// Methods
+	/**
+	 * Foreach dice in the dicecup, it will assign a new random value
+	 */
 	public void roll()
 	{
 		for(Dice d: dices)
