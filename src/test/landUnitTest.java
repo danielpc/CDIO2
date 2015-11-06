@@ -63,7 +63,8 @@ public class landUnitTest {
 	public void testBalanceNotUnderZero(){
 		Player p1 = new Player("player");
 		field = new Field[1];
-		field[0] = new Field("Not extra turn field","", -1001, false); 
+		field[0] = new Field("Not extra turn field","", -1001, false);
+		field[0].land(p1);
 		assertEquals(1000, p1.getBalance());
 	}
 	
