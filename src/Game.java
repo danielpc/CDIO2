@@ -35,7 +35,7 @@ public class Game {
 		LANGUAGE.put("InvalidNumber", "%s slog %d og det må du ikke");
 		LANGUAGE.put("Draw", "Det blev uafgjort");
 		LANGUAGE.put("Wins", "%s er den store vinder. Tillykke!");	
-		LANGUAGE.put("Roll", "Kast");
+		LANGUAGE.put("Roll", "Slå");
 	}
 	
 	/**
@@ -80,30 +80,28 @@ public class Game {
 		{
 			for(Player p: player)
 			{								
-				String askRoll = GUI.getUserButtonPressed(String.format(LANGUAGE.get("AskForRoll"), p.getName()), LANGUAGE.get("Roll"));
-				if(askRoll.compareTo("Roll") == 0)
+				GUI.getUserButtonPressed(String.format(LANGUAGE.get("AskForRoll"), p.getName()), LANGUAGE.get("Roll"));
+				
+				boolean isExtra = false;
+				boolean validTurn = false;
+				do 
 				{
-					boolean isExtra = false;
-					boolean validTurn = false;
-					do 
+					diceCup.roll();
+					GUI.setDice(diceCup.getDiceValues()[0], diceCup.getDiceValues()[1]);	
+					if(field.length+1 >= diceCup.getDiceSum())
 					{
-						diceCup.roll();
-						GUI.setDice(diceCup.getDiceValues()[0], diceCup.getDiceValues()[1]);	
-						if(field.length+1 >= diceCup.getDiceSum())
-						{
-							Field currentfield = field[diceCup.getDiceSum() - 2];
-							validTurn = currentfield.land(p);
-							isExtra = currentfield.isExtraTurn();									
-							GUI.setBalance(p.getName(), p.getBalance());
-							if(validTurn)
-								GUI.displayChanceCard(String.format(LANGUAGE.get("HasRolledAndLAnded"), p.getName(), diceCup.getDiceSum(), currentfield.getDescription()));
-							else
-								GUI.displayChanceCard(String.format(LANGUAGE.get("InvalidTurn"), p.getName()));
-						}
+						Field currentfield = field[diceCup.getDiceSum() - 2];
+						validTurn = currentfield.land(p);
+						isExtra = currentfield.isExtraTurn();									
+						GUI.setBalance(p.getName(), p.getBalance());
+						if(validTurn)
+							GUI.displayChanceCard(String.format(LANGUAGE.get("HasRolledAndLAnded"), p.getName(), diceCup.getDiceSum(), currentfield.getDescription()));
 						else
-							GUI.displayChanceCard(String.format(LANGUAGE.get("InvalidNumber"), p.getName(), diceCup.getDiceSum()));
-					} while (isExtra && validTurn);						
-				}					
+							GUI.displayChanceCard(String.format(LANGUAGE.get("InvalidTurn"), p.getName()));
+					}
+					else
+						GUI.displayChanceCard(String.format(LANGUAGE.get("InvalidNumber"), p.getName(), diceCup.getDiceSum()));
+				} while (isExtra && validTurn);											
 			}	
 
 			if (player[0].isWinner() && player[1].isWinner())
