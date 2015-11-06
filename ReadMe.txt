@@ -1,28 +1,28 @@
-=== Description ===
-Simple graphical game about collecting points by landing on different 
-fields. First to 3000 points wins.
+=== Beskrivelse ===
+Simpelt grafisk spil som går ud på at samle point ved at lande på forskellige
+felter. Første spiller som når 3000 point vinder.
 
 === Installation ===
-How to install the game. 
+Sådan kompileres og køres spillet.
 
-1)	Install Eclipse
+1)	Installer Eclipse
 
-2) 	Import the project to Eclipse
-	2a)	Click File
-	2b)	Click Import
-	2c)	Select "Projects from Git"
-	2d) Select "Clone URI"
-	2e) Copy "https://github.com/danielpc/CDIO2" to URI
+2) 	Importer projektet ind i Eclipse
+	2a)	Klik "Fil"
+	2b)	Klik importér
+	2c)	Vælg "Projekter fra Git"
+	2d) Vælg "Klon URI"
+	2e) Indsæt "https://github.com/danielpc/CDIO2" i URI
 
-3) 	Expand "CDIO2"
+3) 	Udvid "CDIO2"
 
-4)	Expand "src"
+4)	Udvid "src"
 
-5)	Right click "spil" and select "run as" and choose "Java application"
+5)	Højreklik på "spil" og vælg "kør som" -> "Java application"
 	
 	
 
-=== Authors ===
+=== Udviklere ===
 Daniel Plaetner-Cancela
 Oliver Skov Celest
 Valdemar Carøe
