@@ -25,7 +25,7 @@ Sådan kompileres og køres spillet.
 5)	Højreklik på "spil" og vælg "kør som" -> "Java application"
 
 Bemærkning
-Hvis Eclipse ikke er sat til at læse UTC-8, kan æøå ikke læses ordenligt. 
+Hvis Eclipse ikke er sat til at læse UTF-8, kan æøå ikke læses ordenligt. 
 
 
 === Udviklere ===
