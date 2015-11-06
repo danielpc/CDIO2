@@ -2,6 +2,10 @@
 Simpelt grafisk spil som går ud på at samle point ved at lande på forskellige
 felter. Første spiller som når 3000 point vinder.
 
+=== Minimumskrav ===
+Windows 7 eller nyere
+Den kræves at du har Java installeret (nyeste version anbefalet)
+
 === Installation ===
 Sådan kompileres og køres spillet.
 
@@ -19,8 +23,10 @@ Sådan kompileres og køres spillet.
 4)	Udvid "src"
 
 5)	Højreklik på "spil" og vælg "kør som" -> "Java application"
-	
-	
+
+Bemærkning
+Hvis Eclipse ikke er sat til at læse UTC-8, kan æøå ikke læses ordenligt. 
+
 
 === Udviklere ===
 Daniel Plaetner-Cancela
