@@ -5,7 +5,7 @@ public class Account {
 	private int balance;
 
 	/**
-	 * Creates an Account, with a default balance of 3000
+	 * Creates an Account, with a default balance of 1000
 	 */
 	public Account()
 	{
@@ -33,7 +33,6 @@ public class Account {
 			return true;
 		}
 		else
-			balance = 0;
 			return false;
 	}
 
