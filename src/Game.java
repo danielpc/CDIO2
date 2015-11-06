@@ -17,24 +17,25 @@ public class Game {
 	 */
 	private static void setUpStrings()
 	{
-		LANGUAGE.put("Tower", "Tower and got 250 points");
-		LANGUAGE.put("Crater", "Crater and lost 100 points");
-		LANGUAGE.put("PalaceGates", "Palace gates and got 100 points");
-		LANGUAGE.put("ColdDesert", "Cold Desert and lost 20 points");
-		LANGUAGE.put("WalledCity", "Walled city and got 180 points");
-		LANGUAGE.put("Monastery", "Monastery and gained nothing");
-		LANGUAGE.put("BlackCave", "Black cave and lost 70 points");
-		LANGUAGE.put("HutsMT", "Huts in the mountain and got 60 points");
-		LANGUAGE.put("Werewall", "The werewall and lost 80 points, but gained an extra turn");
-		LANGUAGE.put("Pit", "The pit and lost 50 points");
-		LANGUAGE.put("Goldmine", "Goldmine and got 650 points");
-		LANGUAGE.put("AskPlayerName", "Player %d write your name");
-		LANGUAGE.put("AskForRoll", "%s has to roll");
-		LANGUAGE.put("HasRolledAndLAnded", "%s has rolled %d and landed on %s");
-		LANGUAGE.put("InvalidTurn", "%s got an invalid roll");
-		LANGUAGE.put("InvalidNumber", "%s has rolled %d and is an invalid number");
-		LANGUAGE.put("Draw", "It's a draw");
-		LANGUAGE.put("Wins", "%s wins");	
+		LANGUAGE.put("Tower", "Du er nu oven på et tårn, og selvdom det ikke giver mening, får du nu 250. Ses.");
+		LANGUAGE.put("Crater", "Du faldt ned i et krater. Oobs? -100 faggot.");
+		LANGUAGE.put("PalaceGates", "Du står foran palads-porten og tigger. Du tjener 100 dit fucking tigger-svin.");
+		LANGUAGE.put("ColdDesert", "Det er meget koldt, og 20 af dine hårdt-tjente penge fryser til is og knækker over på midten.");
+		LANGUAGE.put("WalledCity", "Du er nu tryg i den bemurede by, og du sælger dit tøj for 180");
+		LANGUAGE.put("Monastery", "Velkommen til stilhedens zone. Intet sker.");
+		LANGUAGE.put("BlackCave", "Den sorte grotte er meget mørk. Du taber 70 og kan ikke finde dem igen.");
+		LANGUAGE.put("HutsMT", "Clegane 'The Mountain' er sød ved dig, du får 60.");
+		LANGUAGE.put("Werewall", "Varulvene flækker dig midt over. Du mister 80.");
+		LANGUAGE.put("Pit", "Du er faldet i 'The Pit' og får banket 50 ud af dig. Svans.");
+		LANGUAGE.put("Goldmine", "Du har fundet guld i bjergene og sælger det for 650, du er rig!");
+		LANGUAGE.put("AskPlayerName", "Spiller %d oplys dit navn");
+		LANGUAGE.put("AskForRoll", "%s" + ", din tur");
+		LANGUAGE.put("HasRolledAndLAnded", "%s slog %d: %s");
+		LANGUAGE.put("InvalidTurn", "%s det slag er vist ikke muligt");
+		LANGUAGE.put("InvalidNumber", "%s slog %d og det må du ikke");
+		LANGUAGE.put("Draw", "Det blev uafgjort");
+		LANGUAGE.put("Wins", "%s er den store vinder. Tillykke!");	
+		LANGUAGE.put("Roll", "Kast");
 	}
 	
 	/**
@@ -79,7 +80,7 @@ public class Game {
 		{
 			for(Player p: player)
 			{								
-				String askRoll = GUI.getUserButtonPressed(String.format(LANGUAGE.get("AskForRoll"), p.getName()), "Roll");
+				String askRoll = GUI.getUserButtonPressed(String.format(LANGUAGE.get("AskForRoll"), p.getName()), LANGUAGE.get("Roll"));
 				if(askRoll.compareTo("Roll") == 0)
 				{
 					boolean isExtra = false;
